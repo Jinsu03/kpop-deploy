@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura AI | Next Generation Workspace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #020617;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .neon-border {
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.2);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="text-slate-200 selection:bg-sky-500/30">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-sky-500 rounded-lg flex items-center justify-center neon-border">
+                    <i data-lucide="zap" class="text-white w-5 h-5"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter text-white">AURA</span>
+            </div>
+            <div class="hidden md:flex items-center gap-10 text-sm font-bold tracking-widest text-slate-400">
+                <a href="#" class="hover:text-white transition-colors uppercase">홈페이지</a>
+                <a href="#features" class="hover:text-white transition-colors uppercase">제품</a>
+                <a href="#solutions" class="hover:text-white transition-colors uppercase">스토리</a>
+                <a href="#pricing" class="hover:text-white transition-colors uppercase">문의</a>
+                <button
+                    class="px-6 py-2.5 bg-white text-black rounded-full font-black hover:bg-sky-400 hover:text-white transition-all shadow-lg shadow-white/10">
+                    지금 구매하기
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Banner (Hero) -->
+    <section class="relative pt-48 pb-32 overflow-hidden">
+        <!-- Dynamic Glow Orbs -->
+        <div
+            class="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-sky-600/20 blur-[150px] rounded-full animate-pulse">
+        </div>
+        <div class="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-violet-600/20 blur-[150px] rounded-full animate-pulse"
+            style="animation-delay: 2s;"></div>
+
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-20">
+            <!-- Text Content -->
+            <div class="flex-1 space-y-10 text-center lg:text-left z-10" data-aos="fade-up">
+                <div
+                    class="inline-flex items-center gap-3 px-5 py-2 rounded-full glass border border-white/20 text-sm font-bold text-sky-400 uppercase tracking-[0.2em]">
+                    <span class="flex h-3 w-3">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+                    </span>
+                    Aura의 진화
+                </div>
+
+                <h1 class="text-7xl lg:text-[100px] font-black tracking-tighter leading-none text-white">
+                    모든 것을 <br>
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-500 to-violet-600 animate-gradient-x">
+                        위한 설계.
+                    </span>
+                </h1>
+
+                <p class="text-xl lg:text-2xl text-slate-400 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light">
+                    Aura Phone은 가능성의 한계를 재정의합니다. 차세대 <span class="text-white font-semibold">Neural-X 칩</span>과
+                    아름다운 티타늄 유니바디의 결합을 경험하세요.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start">
+                    <button
+                        class="group relative px-12 py-6 bg-white text-black rounded-full font-black text-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(255,255,255,0.2)]">
+                        <span class="relative z-10">Aura 예약 주문</span>
+                        <div
+                            class="absolute inset-0 bg-sky-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500">
+                        </div>
+                    </button>
+                    <button
+                        class="px-12 py-6 glass text-white rounded-full font-extrabold text-xl hover:bg-white/10 border-white/20 transition-all flex items-center gap-3">
+                        <i data-lucide="play-circle" class="w-6 h-6"></i> 스펙 살펴보기
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-8 pt-6 justify-center lg:justify-start border-t border-white/5">
+                    <div class="space-y-1">
+                        <p class="text-3xl font-black text-white tracking-tighter">0.1ms</p>
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">응답 속도</p>
+                    </div>
+                    <div class="w-px h-10 bg-white/10"></div>
+                    <div class="space-y-1">
+                        <p class="text-3xl font-black text-white tracking-tighter">100T</p>
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">AI 연산/초</p>
+                    </div>
+                    <div class="w-px h-10 bg-white/10"></div>
+                    <div class="space-y-1">
+                        <p class="text-3xl font-black text-white tracking-tighter">∞</p>
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">무한한 가능성</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Content -->
+            <div class="flex-1 relative" data-aos="zoom-in-left">
+                <!-- Main Image -->
+                <div class="relative z-10 animate-float">
+                    <img src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?q=80&w=1200&auto=format&fit=crop"
+                        alt="Aura Phone"
+                        class="w-full max-w-lg mx-auto drop-shadow-[0_0_100px_rgba(14,165,233,0.4)] rounded-[4rem] border border-white/10">
+
+                    <!-- Floating Spec Cards -->
+                    <div class="absolute -top-10 -right-10 glass p-5 rounded-3xl border-white/20 animate-float"
+                        style="animation-delay: 1s;">
+                        <i data-lucide="cpu" class="text-sky-400 w-8 h-8 mb-2"></i>
+                        <p class="text-xs font-bold text-slate-400 uppercase">뉴럴 엔진</p>
+                        <p class="text-lg font-black text-white">4nm SoC</p>
+                    </div>
+
+                    <div class="absolute bottom-10 -left-12 glass p-5 rounded-3xl border-white/20 animate-float"
+                        style="animation-delay: 2s;">
+                        <i data-lucide="shield-check" class="text-emerald-400 w-8 h-8 mb-2"></i>
+                        <p class="text-xs font-bold text-slate-400 uppercase">내구성</p>
+                        <p class="text-lg font-black text-white">티타늄 5등급</p>
+                    </div>
+
+                    <div class="absolute top-1/2 -left-20 glass px-4 py-3 rounded-2xl border-white/20 animate-float"
+                        style="animation-delay: 0.5s;">
+                        <div class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-rose-500 rounded-full animate-ping"></div>
+                            <p class="text-sm font-bold text-white tracking-tight">상태: Aura 코어 활성화</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-16 border-y border-white/5 bg-white/[0.01]">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-slate-500 text-xs font-bold uppercase tracking-[0.3em] mb-12">글로벌 혁신 기업들이 신뢰합니다</p>
+            <div
+                class="flex flex-wrap justify-center items-center gap-12 lg:gap-24 opacity-40 grayscale transition-all hover:grayscale-0 hover:opacity-100">
+                <span class="text-2xl font-bold tracking-tighter">TECHLEAD</span>
+                <span class="text-2xl font-bold tracking-tighter">FUTURECORE</span>
+                <span class="text-2xl font-bold tracking-tighter">VELOCITY</span>
+                <span class="text-2xl font-bold tracking-tighter">SYNTHETIC</span>
+                <span class="text-2xl font-bold tracking-tighter">NOVA</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features (Benefits) -->
+    <section id="features" class="py-40 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-24" data-aos="fade-up">
+                <div class="text-sky-500 font-black tracking-[0.3em] uppercase text-sm mb-4">핵심 기술</div>
+                <h2 class="text-5xl md:text-7xl font-black text-white tracking-tight mb-8">모든 디테일의 완성</h2>
+                <p class="text-xl text-slate-400 font-light leading-relaxed">Aura Phone은 단순한 기기가 아닙니다. 최첨단 하드웨어와 무한한 지능의 조화입니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Neural Integration -->
+                <div class="glass p-10 rounded-[3.5rem] group hover:bg-sky-500/[0.05] hover:border-sky-500/30 transition-all duration-500"
+                    data-aos="fade-up">
+                    <div
+                        class="w-16 h-16 bg-sky-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i data-lucide="brain-circuit" class="text-sky-400 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">뉴럴 엔진 v2</h3>
+                    <p class="text-slate-400 leading-relaxed font-light">
+                        당신의 습관을 학습하여 다음 행동을 99% 확률로 예측하는 <span class="text-white font-medium">실시간 AI 프로세싱</span>을 경험하세요.
+                    </p>
+                </div>
+
+                <!-- Feature 2: Quantum Display -->
+                <div class="glass p-10 rounded-[3.5rem] group hover:bg-violet-500/[0.05] hover:border-violet-500/30 transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 bg-violet-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i data-lucide="monitor" class="text-violet-400 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">퀀텀 XDR 디스플레이</h3>
+                    <p class="text-slate-400 leading-relaxed font-light">
+                        무한한 대비와 <span class="text-white font-medium">2500 니트의 밝기</span>. 마치 다른 차원에 와 있는 듯한 생생한 컬러를 제공합니다.
+                    </p>
+                </div>
+
+                <!-- Feature 3: Titanium Frame -->
+                <div class="glass p-10 rounded-[3.5rem] group hover:bg-emerald-500/[0.05] hover:border-emerald-500/30 transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield" class="text-emerald-400 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">티타늄 5등급 프레임</h3>
+                    <p class="text-slate-400 leading-relaxed font-light">
+                        강철보다 강하면서 <span class="text-white font-medium">30% 더 가볍습니다</span>. 평생 사용해도 변함없는 항공우주 등급 유니바디입니다.
+                    </p>
+                </div>
+
+                <!-- Feature 4: Neural Camera -->
+                <div class="glass p-10 rounded-[3.5rem] group hover:bg-rose-500/[0.05] hover:border-rose-500/30 transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-16 h-16 bg-rose-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i data-lucide="camera" class="text-rose-400 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">2억 화소 비전 카메라</h3>
+                    <p class="text-slate-400 leading-relaxed font-light">
+                        보이지 않는 것까지 포착합니다. <span class="text-white font-medium">8K 시네마틱 녹화</span>와 AI 기반 저조도 화질 개선을 지원합니다.
+                    </p>
+                </div>
+
+                <!-- Feature 5: Hyper Speed -->
+                <div class="glass p-10 rounded-[3.5rem] group hover:bg-amber-500/[0.05] hover:border-amber-500/30 transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="w-16 h-16 bg-amber-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="text-amber-400 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">초고속 워프 충전</h3>
+                    <p class="text-slate-400 leading-relaxed font-light">
+                        <span class="text-white font-medium">12분 만에 80% 충전</span>. 눈 깜짝할 사이에 하루 분량의 에너지를 채워주는 자기유도 기술입니다.
+                    </p>
+                </div>
+
+                <!-- Feature 6: Privacy First -->
+                <div class="glass p-10 rounded-[3.5rem] group hover:bg-indigo-500/[0.05] hover:border-indigo-500/30 transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div
+                        class="w-16 h-16 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                        <i data-lucide="lock" class="text-indigo-400 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">제로 트러스트 보안</h3>
+                    <p class="text-slate-400 leading-relaxed font-light">
+                        온디바이스 <span class="text-white font-medium">암호화 금고</span>. 당신의 생체 정보와 데이터는 Aura 코어를 절대 떠나지 않습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-40 bg-white/[0.01] border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-24" data-aos="fade-up">
+                <h2 class="text-5xl md:text-6xl font-black text-white tracking-tight mb-8">투명한 가격 정책</h2>
+                <p class="text-xl text-slate-400 font-light">당신의 야망과 규모에 맞는 플랜을 선택하세요.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <div class="glass p-14 rounded-[4rem] space-y-10" data-aos="fade-right">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold text-slate-400 uppercase tracking-widest">개인용 (Standard)</h3>
+                        <div class="text-6xl font-black text-white">₩1,290,000 <span
+                                class="text-xl font-medium text-slate-500">부터</span></div>
+                    </div>
+                    <ul class="space-y-6 text-slate-400 text-lg">
+                        <li class="flex items-center gap-4"><i data-lucide="check" class="text-sky-500 w-6 h-6"></i>
+                            기본 AI 자동화 기능</li>
+                        <li class="flex items-center gap-4"><i data-lucide="check" class="text-sky-500 w-6 h-6"></i>
+                            256GB 초고속 스토리지</li>
+                        <li class="flex items-center gap-4"><i data-lucide="check" class="text-sky-500 w-6 h-6"></i>
+                            표준 하드웨어 보증</li>
+                    </ul>
+                    <button
+                        class="w-full py-5 glass rounded-full font-bold text-lg hover:bg-white/10 transition-all text-white">구매하기</button>
+                </div>
+                <div class="glass p-14 rounded-[4rem] space-y-10 border-sky-500/50 bg-sky-500/5 relative overflow-hidden"
+                    data-aos="fade-left">
+                    <div class="absolute top-8 right-8">
+                        <span
+                            class="px-4 py-1.5 bg-sky-500 text-[11px] font-black text-white uppercase rounded-full tracking-widest shadow-lg shadow-sky-500/30">BEST CHOICE</span>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold text-sky-400 uppercase tracking-widest">프로 (Ultra)</h3>
+                        <div class="text-6xl font-black text-white">₩1,590,000 <span
+                                class="text-xl font-medium text-slate-500">부터</span></div>
+                    </div>
+                    <ul class="space-y-6 text-slate-400 text-lg">
+                        <li class="flex items-center gap-4"><i data-lucide="check" class="text-sky-500 w-6 h-6"></i>
+                            고급 뉴럴 엔진 기능</li>
+                        <li class="flex items-center gap-4"><i data-lucide="check" class="text-sky-500 w-6 h-6"></i>
+                            1TB 티타늄 스토리지</li>
+                        <li class="flex items-center gap-4"><i data-lucide="check" class="text-sky-500 w-6 h-6"></i>
+                            24/7 VIP 우선 지원 서비스</li>
+                        <li class="flex items-center gap-4"><i data-lucide="check" class="text-sky-500 w-6 h-6"></i>
+                            커스텀 AI 모델 트레이닝 지원</li>
+                    </ul>
+                    <button
+                        class="w-full py-5 bg-sky-600 text-white rounded-full font-bold text-lg hover:bg-sky-500 transition-all shadow-[0_0_30px_rgba(2,132,199,0.4)]">지금 업그레이드</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-black">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex flex-col items-center gap-12">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 bg-sky-500 rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(14,165,233,0.3)]">
+                        <i data-lucide="zap" class="text-white w-6 h-6"></i>
+                    </div>
+                    <span class="text-3xl font-black tracking-tighter text-white">AURA</span>
+                </div>
+                <div class="flex gap-12 text-sm font-bold uppercase tracking-widest text-slate-500">
+                    <a href="#" class="hover:text-white transition-colors">개인정보 처리방침</a>
+                    <a href="#" class="hover:text-white transition-colors">이용 약관</a>
+                    <a href="#" class="hover:text-white transition-colors">고객 지원</a>
+                </div>
+                <p class="text-slate-600 font-medium">Copyright &copy; 2026 Aura AI Technologies. 미래를 위한 혁신.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true,
+            easing: 'ease-out-quint'
+        });
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
